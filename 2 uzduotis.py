@@ -3,10 +3,10 @@ class Figūra:
         self.ilgis = ilgis
         self.plotis = plotis
 
-    def plotas(self):
+    def plotas(self): #tusti metodai, kadangi skaiciavimo formules skiriasi priklausomai nuo figuros
         pass
 
-    def perimetras(self):
+    def perimetras(self): #tusti metodai, kadangi skaiciavimo formules skiriasi priklausomai nuo figuros
         pass
 class Stačiakampis(Figūra):
     def __init__(self, ilgis, plotis):
@@ -17,7 +17,7 @@ class Stačiakampis(Figūra):
         return f'Stačiakampio perimetras = {2 * (self.ilgis + self.plotis)}'
 
 class StatusisTrikampis(Figūra):
-    def __init__(self, statinis1, statinis2, izambine):
+    def __init__(self, statinis1, statinis2, izambine): #pasirinkau daryti ne su paveldejimu, kadangi staciajam trikampiui reikalingi kiti parametrai
         self.statinis1 = statinis1
         self.statinis2 = statinis2
         self.izambine = izambine

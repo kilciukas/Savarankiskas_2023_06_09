@@ -4,20 +4,20 @@ class BankoSaskaita:
         self.balansas = balansas
 
     def prideti_pinigus(self, suma):
-        teigiamas = abs(suma)
+        teigiamas = abs(suma) #pavercia ivesta skaiciu i teigiama, jei per klaida ivedama neigiama reiksme
         self.balansas += teigiamas
         print(f'Sąskaita {self.saskaita} papildyta {teigiamas} EUR')
 
     def isimti_pinigus(self, suma):
-        if suma > self.balansas:
+        if suma > self.balansas: #jei norima isimti didesne suma nei balansas, isimama suma lygi balansui
             print(f"Iš sąskaitos {self.saskaita} išimti visi pinigai. Suma {self.balansas} EUR")
             self.balansas = 0
         else:
             if suma >= 0:
-                neigiamas = suma * (-1)
+                neigiamas = suma * (-1) #paverciamas skaicius i neigiama, jei per klaida ivedama teigiama reiksme
                 self.balansas += neigiamas
                 print(f'Iš sąskaitos {self.saskaita} išimta {suma} EUR')
-            else:
+            else: #jei korektiskai ivedama neigiama reiksme, tiesiog suskaiciuojama
                 self.balansas -= suma
                 print(f'Iš sąskaitos {self.saskaita} išimta {suma} EUR')
 
